@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --black: #181722;
+    --white: #f0f0f0;
+    --box-shadow : 0px 4px 4px rgb(0,0,0,0.25);
+}
+
+*{
+    
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    transition: 0.2s linear;
+}
+html{
+    scroll-behavior: smooth;
+
+}
+body{
+    font-family: "Quicksand", sans-serif;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 768px){
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width: 1200px){
+    .container{
+        width: 1120px;
+    }
+}
+
+/* start header */
+.header{
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    position: fixed;
+
+}
+.header .logo-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  min-height: 90px;
+
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.logo h1{
+    font-size: 22px;
+    padding-left: 5px;
+}
+.header .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+} 
+@media (max-width: 768px){
+   .header .nav{
+    position: absolute;
+    top:100%;
+    right: -100%;
+    min-width: 200px;
+    min-height: 55vh;
+    background-color:var(--white);
+    flex-direction: column;
+
+   }
+   .nav.active{
+    right: 0;
+    transition: .5s;
+   }
+ .nav a{
+    display:block;
+    margin-bottom: 50px;
+    padding-top: 0px;
+    color: var(--black);
+font-size: 16px;
+top: -20px;
+}
+}
+
+
+.header .nav li {
+    margin: 0px 20px;
+
+}
+.header .nav li a{
+    color: var(--black);
+    font-size: 17px;
+    font-weight: 600;
+
+}
+.header .nav li a:hover{
+    border-bottom: 1px solid var(--black);
+    padding-bottom: 3px;
+    cursor: pointer;
+   
+}
+.header .icon i {
+    margin-right: 20px;
+    color: var(--black);
+    font-size: 18px;
+
+}
+.header .icon #menu-bar{
+    display: none;
+}
+@media (max-width: 768px){
+    .header .icon #menu-bar{
+        display: inline-block;
+    }
+}
+
+.header .search{
+    position: absolute;
+background-color: transparent;
+top: 100%;
+right: 0;
+width: 50%;
+height: 5rem;
+margin: 15px 30px;
+border-radius: 10px;
+display: none;
+}
+
+.header .search input{
+    width: 70%;
+    height: 40%;
+    padding: 10px;
+    font-size: 16px;
+    box-shadow: var(--box-shadow);
+    
+}
+/* end header */
+/* start home */
+.land{
+    background: url(../image/backk.png) no-repeat;
+    background-size: cover;
+    /* width: 100%; */
+    min-height: 100vh;
+    align-items: center;
+    display: flex;
+text-align: center;
+}
+.land-content{
+    color: var(--black);
+    max-width: 500px;
+padding-right: 10px;
+}
+.land-content h2{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.land-content p{
+    font-size: 18px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+.land .land-btn button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.land .land-btn button:hover{
+    cursor: pointer;
+    font-size:18px ;
+}
+@media (max-width: 768px){
+    .land{
+        background-image: url(../image/backGround.png);
+    }
+    .land-content h2{
+        font-size: 40px;
+    }
+}
+@media (max-width: 992px){
+    .land {
+        background-image: url(../image/backGround.png);
+    }
+    .land .land-content{
+text-align: center;
+margin-right: auto;
+margin-left: auto;
+    }
+}
+/* end home */
+ section .main-heading{
+    font-size: 50px;
+    color: #181722;
+}
